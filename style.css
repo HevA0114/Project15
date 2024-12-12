@@ -1,0 +1,108 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tangerine', cursive;
+    background-color: #800000; /* Maroon */
+    color: gold; /* Font Color */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Top Section Styling */
+.top-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Bottom Section Styling */
+.bottom-section {
+    margin-bottom: 30px;
+}
+
+/* Message Box Styling */
+.message-box {
+    background-color: #4d0000; /* Darker Maroon for contrast */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    background-color: #b30000; /* Button Maroon */
+    color: gold; /* Button Text Color */
+    border: 2px solid gold;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #990000;
+}
+
+/* Popup Heart Shape */
+.popup-heart {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #b30000;
+    color: gold;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gold;
+    font-size: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.popup-heart::before,
+.popup-heart::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #b30000;
+    border: 2px solid gold;
+    border-radius: 50%;
+}
+
+.popup-heart::before {
+    top: -100px;
+    left: 0;
+}
+
+.popup-heart::after {
+    left: -100px;
+    top: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(45deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(45deg);
+    }
+}
